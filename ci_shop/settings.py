@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',  # allows user to login using their social
     'home',
     'products',
-    'bag'
+    'bag',
     'checkout'
 ]
 
