@@ -24,13 +24,16 @@ class OrderForm(forms.ModelForm):
             'street_address2': 'Street Address 2',
             'county': 'County',
         }
-
-        self.fields['full_name'].widget.attrs['autofocus'] = True # will place a cursor at this input area when a page is loaded
+        # will place a cursor at this input area when a page is loaded
+        self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *' # will add a * in required places
+                placeholder = f'{placeholders[field]} *'
+                # will add a * in required places
             else:
                 placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder  
-            self.fields[field].widget.attrs['class'] = 'stripe-style-input' # custom css style
-            self.fields[field].label = False # removes labels from input areas
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            # custom css style
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            # removes labels from input areas
+            self.fields[field].label = False
