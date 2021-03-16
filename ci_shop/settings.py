@@ -83,7 +83,6 @@ TEMPLATES = [
             'builtins': [
                 'cripsy_forms.templatetags.cripsy_forms_tags',
                 'cripsy_forms.templatetags.cripsy_forms_field',
-
             ]
         },
     },
